@@ -14,5 +14,9 @@ class OfllineRepositoriSiswa(
     private val siswaDao: SiswaDao
 ) : RepositoriSiswa {
 
-    
+    override fun getAllSiswaStream(): Flow<List<Siswa>> {
+        return siswaDao.getAllSiswa()
+    }
+
+
 }
