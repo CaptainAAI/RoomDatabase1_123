@@ -10,3 +10,9 @@ interface RepositoriSiswa
     suspend fun insertSiswa(siswa: Siswa)
 }
 
+class OfllineRepositoriSiswa(
+    private val siswaDao: SiswaDao
+) : RepositoriSiswa {
+
+    
+}
