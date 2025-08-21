@@ -43,7 +43,7 @@ data class DetailSiswa(
     val alamat: String = "",
     val telpon: String = ""
 )
-
+/* fungsi untuk konversi antara Siswa dan DetailSiswa */
 fun DetailSiswa.toSiswa(): Siswa = Siswa(
     id = id,
     nama = nama,
