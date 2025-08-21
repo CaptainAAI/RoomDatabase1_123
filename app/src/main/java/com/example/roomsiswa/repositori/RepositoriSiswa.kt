@@ -18,5 +18,7 @@ class OfllineRepositoriSiswa(
         return siswaDao.getAllSiswa()
     }
 
-
+    override suspend fun insertSiswa(siswa: Siswa) {
+        siswaDao.insert(siswa)
+    }
 }
