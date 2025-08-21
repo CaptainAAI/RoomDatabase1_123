@@ -10,7 +10,7 @@ interface RepositoriSiswa
     suspend fun insertSiswa(siswa: Siswa)
 }
 
-class OfllineRepositoriSiswa(
+class OfflineRepositoriSiswa(
     private val siswaDao: SiswaDao
 ) : RepositoriSiswa {
 
