@@ -77,3 +77,25 @@ fun HostNavigasi(
         }
     }
 }
+
+@Composable
+private fun findTitleByRoute(route: String): Int {
+    return when (route) {
+        DestinasiHome.route -> DestinasiHome.titleRes
+        DestinasiEntry.route -> DestinasiEntry.titleRes
+        else -> R.string.app_name // Default title
+    }
+}
+
+/**
+ * Navigation destinations.
+ */
+object DestinasiHome : DestinasiNavigasi {
+    override val route = "home"
+    override val titleRes = R.string.app_name
+}
+
+object DestinasiEntry : DestinasiNavigasi {
+    override val route = "item_entry"
+    override val titleRes = R.string.entry_siswa
+}
